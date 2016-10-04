@@ -18,7 +18,7 @@ def addLeaf(filename):
         randNum = randint(5,x)
         #place leaf somewhere in image -- not always completely on the sign
         leaf =  (randNum/2-eX/2, randNum/2 -eY/2, randNum/2 + eX/2, randNum/2 + eY/2)
-        mud =  (randNum/2-eX/2, randNum/2 -eY/2, randNum/2 + eX/2, randNum/2 + eY/2)
+        mud = (randNum/2-eX1/2, randNum/2 -eY1/2, randNum/2 + eX1/2, randNum/2 + eY1/2)
         draw = ImageDraw.Draw(im)
         #the ellipse was chosen over square, because it is a simple shape that is more leaf-like
         draw.ellipse(leaf,  fill='green')
@@ -27,7 +27,7 @@ def addLeaf(filename):
         #insert another mud item
         randNum = randint(10,x)
         draw1 = ImageDraw.Draw(im)
-        draw1.ellipse((randNum/2-eX1/2, randNum/2 -eY1/2, randNum/2 + eX1/2, randNum/2 + eY1/2),  fill=(102,51,0))
+        draw1.ellipse(mud,  fill=(102,51,0))
 
         del draw1        
         
