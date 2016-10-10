@@ -16,9 +16,10 @@ def addLeaf(filename):
         eX, eY, eX1, eY1 = 7, 3, 4, 4
         #generate a random value to begin leaf placement
         randNum = randint(5,x)
+        randNum2 = randint(5,x)
         #place leaf somewhere in image -- not always completely on the sign
-        leaf =  (randNum/2-eX/2, randNum/2 -eY/2, randNum/2 + eX/2, randNum/2 + eY/2)
-        mud = (randNum/2-eX1/2, randNum/2 -eY1/2, randNum/2 + eX1/2, randNum/2 + eY1/2)
+        leaf =  (randNum-eX/2, randNum -eY/2, randNum + eX/2, randNum + eY/2)
+        mud = (randNum2-eX1/2, randNum2 -eY1/2, randNum2 + eX1/2, randNum2 + eY1/2)
         draw = ImageDraw.Draw(im)
         #the ellipse was chosen over square, because it is a simple shape that is more leaf-like
         draw.ellipse(leaf,  fill='green')
