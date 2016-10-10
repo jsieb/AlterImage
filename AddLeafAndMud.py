@@ -13,7 +13,7 @@ def addLeaf(filename):
         #takes into account the size of the image
         x,y = im.size
         #This was chosen to be small enough not to block the entire sign
-        eX, eY, eX1, eY1 = 7, 3, 4, 4
+        eX, eY, eX1, eY1 = x/9, y/5, x/6, y/6
         #generate a random value to begin leaf placement
         randNum = randint(5,x)
         randNum2 = randint(5,x)
