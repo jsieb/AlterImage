@@ -10,7 +10,7 @@ from random import randint
 def addLeaf(filename):
     for files in os.listdir(filename):
         im = Image.open(filename + "\\" + files)
-        #takes into account the size of the image -- should be a square of size (31,31)
+        #takes into account the size of the image
         x,y = im.size
         #This was chosen to be small enough not to block the entire sign
         eX, eY, eX1, eY1 = 7, 3, 4, 4
